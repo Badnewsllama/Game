@@ -18,22 +18,13 @@ console.log(shaman);
 const warlock = new Warlock ("Escobar")
 console.log(warlock);
 
-const pet = new Pet ("Scooby")
-console.log(pet);
+//shaman.summonPet("pangolin");
+//console.log(shaman);
 
-shaman.levelUp();
-console.log(shaman);
+//shaman.equipWeapon("cursedDagger");
+//console.log(shaman);
 
-mage.levelUp();
-console.log(mage);
-
-warlock.summonPet("imp");
-console.log(warlock);
-
-shaman.summonPet("Fire Elemental");
-console.log(shaman);
+//shaman.useSpell("disrupt");
+//console.log(shaman);
 
 console.log(shaman.getDamage());
-
-warlock.equipWeapon("thunderthigh");
-console.log(warlock);

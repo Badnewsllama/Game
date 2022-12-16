@@ -13,6 +13,9 @@ class Character {
         this.weapons = [];
         this.pets = [];
         this.activePet = null;
+        this.activeSPell = null;
+        this.equipedWeapon = null;
+        
     }
 
     levelUp(){
@@ -43,6 +46,19 @@ class Character {
                 const magicDamage = this.magic;
                 return petDamage + magicDamage;
 
+            } else if (this.activeSPell){
+                const spellDamage = this.activeSPell.power;
+                const magicDamage = this.magic;
+                return spellDamage + magicDamage;
+
+            } else if (this.equipedWeapon){
+                const weaponDamage = this.equipedWeapon.damage;
+                const attackDamage = this.attack;
+                return weaponDamage + attackDamage
+
+            } else {
+                const attackDamage = this.attack;
+                return attackDamage;
             }
     }
 
@@ -58,6 +74,15 @@ class Character {
         }
     }
 
+    useSpell(spellName){
+        for(let i = 0; i < this.spells.length; i++){
+            const spell = this.spells[i];
+            if(spell.name === spellName){
+                this.activeSPell = spell
+            }
+        }
+    }
+
     addWeapon(weapon){
         this.weapons.push(weapon);
 
@@ -67,7 +92,7 @@ class Character {
         for(let i=0; i < this.weapons.length; i++) {
             const weapon = this.weapons[i];
             if(weapon.name === weaponName){
-                this.equipWeapon = weapon;
+                this.equipedWeapon = weapon;
             }
         }
     }
