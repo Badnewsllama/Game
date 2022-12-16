@@ -1,8 +1,4 @@
-Game
-
-In our game, you can choose a class, level up, cast spells, and attack mobs until you die.
-
-Day 1 of game
+Game Llama (Further game logic pending day 8 hmw )
 
 I want to be able to level up a character, and increase its stats.
 
@@ -12,11 +8,17 @@ In our game, 10 is a very strong stat, the max to start with. 1 is the lowest. T
 
 Health and mana are different. They have no bounds.
 
-Mage is a high mana, high magic but low HP/attack character that starts with the Fireball spell.
+## Mage 
 
-Shaman is a mid-range allrounder, that starts with a Fire Elemental pet, and the weapon Thunderfury, and Light Heal.
+is a high mana, high magic but low HP/attack character that starts with fireball speel and staff weapon.
 
-Warlock is a high HP, weak character that will deal most of it's damage with summons, and start with a Imp Pet.
+## Shaman 
+
+is a mid-range allrounder, that starts with a pangolin pet, cursed Dagger weapon and disrupt spell.
+
+## Warlock 
+
+is a high HP, weak character that will deal most of it's damage with summons, and start with a racoon pet.
 
 ## Game Rules
 
