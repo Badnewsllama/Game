@@ -17,7 +17,8 @@ Mage is a high mana, high magic but low HP/attack character that starts with the
 Shaman is a mid-range allrounder, that starts with a Fire Elemental pet, and the weapon Thunderfury, and Light Heal.
 
 Warlock is a high HP, weak character that will deal most of it's damage with summons, and start with a Imp Pet.
-Game Rules
+
+## Game Rules
 
 Our game logic dictates a character's damage is calculated using this algorithm:
 
@@ -25,6 +26,6 @@ Our game logic dictates a character's damage is calculated using this algorithm:
     If a character is casting a spell, we take the spell's damage and add it to the character's magic damage.
     If a character has neither an activePet, nor a spell, we take their weapon's damage, and add it to the character's attack damage.
 
-Pet Logic
+## Pet Logic
 
 A character can have an array of pets, but can only have a single active pet. They have to summon the pet.

@@ -34,3 +34,6 @@ shaman.summonPet("Fire Elemental");
 console.log(shaman);
 
 console.log(shaman.getDamage());
+
+warlock.equipWeapon("thunderthigh");
+console.log(warlock);

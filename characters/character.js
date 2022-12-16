@@ -57,6 +57,21 @@ class Character {
             }
         }
     }
+
+    addWeapon(weapon){
+        this.weapons.push(weapon);
+
+    }
+
+    equipWeapon(weaponName){
+        for(let i=0; i < this.weapons.length; i++) {
+            const weapon = this.weapons[i];
+            if(weapon.name === weaponName){
+                this.equipWeapon = weapon;
+            }
+        }
+    }
+
 }
 
 module.exports = Character;
