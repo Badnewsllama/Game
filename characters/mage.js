@@ -2,7 +2,7 @@
 const Character = require("./character")
 const fireball = require("../spells/fireball")
 const staff = require("../weapons/staff")
-const config = require("../config/classNames")
+const config = require("../config/config")
 
 class Mage extends Character {
     constructor(name) {

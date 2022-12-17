@@ -2,7 +2,7 @@ const Character = require("./character")
 const Pet  = require("./pet"); // Pulling "Pet" class factory in pet.js file
 const cursedDagger = require("../weapons/curseddagger")
 const disrupt = require("../spells/disrupt");
-const config = require("../config/classNames");
+const config = require("../config/config");
 
 class Shaman extends Character{
     constructor (name){

@@ -1,4 +1,4 @@
-const config = require("../config/classNames")
+const config = require("../config/config")
 
 class Character {
     constructor(name, className, attack, magic, defense, speed, health, mana) {

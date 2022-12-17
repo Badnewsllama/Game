@@ -1,12 +1,15 @@
-Game Llama (Further game logic pending day 8 hmw )
+## RESTARDED LLAMA GAMES 1985
 
-I want to be able to level up a character, and increase its stats.
+THE VISION: 1) To have a simple game path where you choose a character from a simple prompt.
+            2) Upon choosing CHARACTER stats are shown
+            3) receive prompt to FIGHT OR STAND
+                a)if choose to stand mob character fucks you
+                b)you get to choose again
+            4)if choose to FIGHT game begins
+            
+            5) IN DEVELOPMENT 
 
-The stats of each character : Level Attack Magic Defense Speed Health Mana
-
-In our game, 10 is a very strong stat, the max to start with. 1 is the lowest. These are the boundaries we are going to define.
-
-Health and mana are different. They have no bounds.
+CHARACTERS:
 
 ## Mage 
 
@@ -20,6 +23,10 @@ is a mid-range allrounder, that starts with a pangolin pet, cursed Dagger weapon
 
 is a high HP, weak character that will deal most of it's damage with summons, and start with a racoon pet.
 
+## Mobs
+
+A mob array was created to ultimately be chose at random when fight sequence is prompt.
+
 ## Game Rules
 
 Our game logic dictates a character's damage is calculated using this algorithm:
@@ -31,3 +38,13 @@ Our game logic dictates a character's damage is calculated using this algorithm:
 ## Pet Logic
 
 A character can have an array of pets, but can only have a single active pet. They have to summon the pet.
+
+## Spell Logic
+
+A character can have a spell available abd can only use if when spell is activated by useSpell Function.
+
+## Weapon LOgic
+
+A characte can have a weapon available abd can only use it if weapons is equipped with euip function.
+
+

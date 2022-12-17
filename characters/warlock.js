@@ -1,6 +1,6 @@
 const Character = require("./character")
 const Pet  = require("./pet"); // Pulling "Pet" class factory in pet.js file
-const config = require("../config/classNames");
+const config = require("../config/config");
 
 class Warlock extends Character{
     constructor (name){
