@@ -27,4 +27,7 @@ console.log(warlock);
 //shaman.useSpell("disrupt");
 //console.log(shaman);
 
-console.log(shaman.getDamage());
+shaman.equipWeapon("cursedDagger");
+console.log(shaman.getDamage("cursedDagger"));
+console.log(mage.getDamage());
+console.log(warlock.getDamage());
