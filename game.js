@@ -7,6 +7,7 @@ const config = require("./config/config");
 const mobs = require("./mobs/mobs");
 
 const prompt = require("prompt-promise");
+const { classNames } = require("./config/config");
 
 
 // const mage = new Mage ("Merlin");
@@ -46,6 +47,9 @@ let character;
         throw Error ("You typed a class that is not available in this version of the game")
     }
 
+    
+
+
 //spawn a random mob, then lets prompt to fight it.
 //lets just take the first mob in the array, then if we beat it, we can fight the second one.
 
@@ -64,25 +68,28 @@ while(character.health > 0 && mob.health > 0){
     console.log(character.weapons);//here I lay out character's available attacks.
     console.log(".............................................");
 
-    const walkOrStand = await prompt ("would you like to fight or stand?\n")// creating a prompt that will need development but for now just a pause 
-    console.log("You chose to: " + walkOrStand);
-    console.log("A wild " + mob.name + " appears");
-    console.log(mob.name + " has " + mob.health + " health and looks horny");
-    console.log(".............................................");
-        if(walkOrStand === "stand"){
-        console.log(mob.name + " Fucked you in the ass hard...SAD..choose again!!");
+        const walkOrStand = await prompt ("would you like to fight or stand?\n")// creating a prompt that will need development but for now just a pause 
+        console.log("You chose to: " + walkOrStand);
+        console.log("A wild " + mob.name + " appears");
+        console.log(mob.name + " has " + mob.health + " health and looks horny");
         console.log(".............................................");
-    } else {
-            const move = await prompt("Select a move: attack, or spell\n");
-            console.log("You selected: " + move);
-            const damage = character.getDamage(move);
-            console.log("You attack for " + damage);
-            const mobDamage = mob.damage;
-            console.log(mob.name + " hits you for " + mob.damage);
-            mob.health = mob.health - damage;
-            character.health = character.health -mobDamage;
-            console.log("Your health is " + character.health);
-            console.log(mob.name + "'s health is " + mob.health);}
+            if(walkOrStand === "stand"){
+    
+            console.log(mob.name + " Fucked you in the ass hard...SAD..choose again!!");
+            console.log(".............................................");
+            
+            
+        } else {
+                const move = await prompt("Select a move: attack, or spell\n");
+                console.log("You selected: " + move);
+                const damage = character.getDamage(move);
+                console.log("You attack for " + damage);
+                const mobDamage = mob.damage;
+                console.log(mob.name + " hits you for " + mob.damage);
+                mob.health = mob.health - damage;
+                character.health = character.health -mobDamage;
+                console.log("Your health is " + character.health);
+                console.log(mob.name + "'s health is " + mob.health);}
 
 }
 
